@@ -1,0 +1,81 @@
+# Wiki Schema
+
+## Domain
+AI/ML 与大模型研究，涵盖模型、架构、训练、推理、对齐、评测、数据、工具与研究机构。
+
+## Conventions
+- 文件名使用小写、连字符，不使用空格（如 `transformer-architecture.md`）。
+- 每个 wiki 页面以 YAML frontmatter 开始。
+- 使用 `[[wikilinks]]` 进行页面间链接；每个新页面至少包含 2 个出链。
+- 更新页面时必须更新 `updated` 日期。
+- 每个新页面必须加入 `index.md` 的相应章节。
+- 每次操作都追加到 `log.md`。
+- 综合 3 个或以上来源的页面，在对应段落末尾使用 `^[raw/articles/source-file.md]` 标注来源。
+
+## Frontmatter
+```yaml
+---
+title: Page Title
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+type: entity | concept | comparison | query | summary
+tags: [taxonomy-tag]
+sources: [raw/articles/source-name.md]
+confidence: high | medium | low
+contested: true
+contradictions: [other-page-slug]
+---
+```
+
+`confidence`、`contested` 与 `contradictions` 按需使用。
+
+### raw/ Frontmatter
+```yaml
+---
+source_url: https://example.com/article
+ingested: YYYY-MM-DD
+sha256: <sha256 of the body below frontmatter>
+---
+```
+
+## Tag Taxonomy
+- Models: `model`, `architecture`, `benchmark`
+- Training: `training`, `optimization`, `fine-tuning`, `data`
+- Inference: `inference`, `serving`, `efficiency`
+- Alignment: `alignment`, `safety`, `evaluation`
+- Ecosystem: `company`, `lab`, `open-source`, `tool`
+- Meta: `comparison`, `timeline`, `controversy`, `prediction`
+
+所有页面标签必须来自本 taxonomy；新增标签前先更新本文件。
+
+## Page Thresholds
+- 实体或概念出现在 2 个以上来源，或是单一来源的核心主题时创建页面。
+- 已有页面覆盖的主题直接补充，不重复创建。
+- 不为顺带提及、次要细节或领域外主题创建页面。
+- 页面超过约 200 行时拆分为子主题，并建立交叉链接。
+- 内容完全被替代时移入 `_archive/` 并从索引移除。
+
+## Page Types
+### Entity Pages
+记录人物、组织、产品、模型等实体：概览、关键事实与日期、关系、来源。
+
+### Concept Pages
+记录概念或主题：定义、当前知识、开放问题或争议、相关概念。
+
+### Comparison Pages
+记录并列分析：比较对象、维度表格、综合结论、来源。
+
+## Update Policy
+遇到冲突时先检查日期；较新来源通常优先。若确有矛盾，保留双方观点并注明日期和来源，在 frontmatter 中标注 `contested: true` 与 `contradictions:`，等待复核。
+
+## Wiki Structure
+```text
+SCHEMA.md       # 结构、约定与标签体系
+index.md        # 内容目录
+log.md          # 追加式操作日志
+raw/            # 不可修改的原始来源
+entities/       # 实体页面
+concepts/       # 概念页面
+comparisons/    # 对比分析
+queries/        # 值得保留的查询结果
+```
