@@ -1,4 +1,5 @@
 {
   "showViewHeader": true,
-  "showRibbon": true
+  "showRibbon": true,
+  "baseFontSize": 19
 }
