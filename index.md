@@ -1,7 +1,7 @@
 # Wiki Index
 
 > 内容目录。每个 wiki 页面按类型列出,并附一行摘要。
-> Last updated: 2026-08-22 | Total pages: 6
+> Last updated: 2026-08-24 | Total pages: 7
 
 ## 知识页 Knowledge
 <!-- 按大类分栏:greedy, data-structure, dp, graph, number-theory, string, computational-geometry, misc -->
@@ -24,6 +24,7 @@
 ## 出题池 Problems
 <!-- 每题一行:题目名(难度档位) → [[页面]] -->
 - LeetCode 162 寻找峰值（D） → [[LeetCode-162-寻找峰值]]
+- 洛谷 P2249【深基13.例1】查找（D） → [[洛谷-P2249-【深基13.例1】查找]]
 - 洛谷 P1177【模板】排序（D） → [[洛谷-P1177-【模板】排序]]
 
 ## 工具页 Tools
