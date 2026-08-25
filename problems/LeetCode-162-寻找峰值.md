@@ -3,9 +3,12 @@ title: LeetCode 162：寻找峰值
 created: 2026-08-22
 updated: 2026-08-24
 type: problem
-tags: [binary-search]
-tags-ch: [二分搜索]
-sources: [raw/notes/算法讲解006【入门】二分搜索.md]
+tags:
+  - binary-search
+tags-ch:
+  - 二分搜索
+sources:
+  - raw/notes/算法讲解006【入门】二分搜索.md
 difficulty: D
 source_url: https://leetcode.cn/problems/find-peak-element/
 confidence: medium
