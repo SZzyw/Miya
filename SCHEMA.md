@@ -52,9 +52,9 @@ raw/notes/ 中的笔记是教练的教学素材。整理后的页面不是原文
 | 标签                     | 中文   | 覆盖内容                                                         |
 | ---------------------- | ---- | ------------------------------------------------------------ |
 | greedy                 | 贪心   | 贪心策略、反悔贪心                                                    |
-| data-structure         | 数据结构 | 栈、队列、堆、链表、并查集、树状数组、线段树、平衡树、ST 表、莫队、二分、二分答案、分治、整体二分、CDQ 分治、排序 |
+| data-structure         | 数据结构 | 栈、队列、堆、链表、并查集、树状数组、线段树、平衡树、ST 表、莫队、二分、二分答案、分治、整体二分、CDQ 分治、排序、递归 |
 | dp                     | 动态规划 | 线性 DP、背包、区间 DP、树形 DP、状压 DP、数位 DP、记忆化搜索                       |
-| graph                  | 图论   | 最短路、最小生成树、拓扑、强连通/Tarjan、二分图、网络流、LCA、树上问题                     |
+| graph                  | 图论   | 最短路、最小生成树、拓扑、强连通/Tarjan、二分图、网络流、LCA、树上问题、二叉树                     |
 | number-theory          | 数论   | 素数、GCD/LCM、欧拉函数、同余、逆元、组合数学、博弈                                |
 | string                 | 字符串  | 字符串哈希、KMP、AC 自动机、Manacher、后缀数组、字典树                           |
 | computational-geometry | 计算几何 | 向量、凸包、半平面交、旋转卡壳、极角排序                                         |
@@ -67,9 +67,9 @@ C++ 语法、函数、类、STL 等内容不属于上述算法大类，使用 la
 | 大类 | 精确标签 |
 | --- | --- |
 | greedy | greedy-strategy 贪心策略，regret-greedy 反悔贪心 |
-| data-structure | stack 栈，queue 队列，heap 堆，linked-list 链表，dsu 并查集，fenwick 树状数组，segment-tree 线段树，balanced-tree 平衡树，sparse-table ST 表，mo-algorithm 莫队，binary-search 二分搜索，binary-search-answer 二分答案，divide-and-conquer 分治，parallel-binary-search 整体二分，cdq CDQ 分治，sorting 排序 |
+| data-structure | stack 栈，queue 队列，heap 堆，linked-list 链表，dsu 并查集，fenwick 树状数组，segment-tree 线段树，balanced-tree 平衡树，sparse-table ST 表，mo-algorithm 莫队，binary-search 二分搜索，binary-search-answer 二分答案，divide-and-conquer 分治，parallel-binary-search 整体二分，cdq CDQ 分治，sorting 排序，recursion 递归 |
 | dp | linear-dp 线性 DP，knapsack 背包，interval-dp 区间 DP，tree-dp 树形 DP，bitmask-dp 状压 DP，digit-dp 数位 DP，memoization 记忆化搜索 |
-| graph | shortest-path 最短路，mst 最小生成树，topological-sort 拓扑排序，tarjan 强连通/Tarjan，bipartite 二分图，network-flow 网络流，lca LCA，tree 树上问题 |
+| graph | shortest-path 最短路，mst 最小生成树，topological-sort 拓扑排序，tarjan 强连通/Tarjan，bipartite 二分图，network-flow 网络流，lca LCA，tree 树上问题，binary-tree 二叉树 |
 | number-theory | prime 素数，gcd-lcm GCD/LCM，euler-phi 欧拉函数，congruence 同余，inverse 逆元，combinatorics 组合数学，game-theory 博弈 |
 | string | string-hash 字符串哈希，kmp KMP，ac-automaton AC 自动机，manacher Manacher，suffix-array 后缀数组，trie 字典树 |
 | computational-geometry | vector-geo 向量，convex-hull 凸包，half-plane 半平面交，rotating-calipers 旋转卡壳，polar-sort 极角排序 |
@@ -119,6 +119,14 @@ C++ 语法、函数、类、STL 等内容不属于上述算法大类，使用 la
 - 检查 Markdown 源文本，而不只检查渲染后的显示效果：标题层级、YAML frontmatter、代码围栏、行内代码、数学公式和 Obsidian 双链都必须保持有效。
 - 正文中可能被 Markdown 解析导致错误，要使用反斜杠转义。例如右移运算符的源码写成 `\>\>`。
 
+### Mermaid 图示
+
+- Mermaid 只按内容需要使用：当流程、分支、状态变化、层级或依赖关系用图比文字更清楚时，可以加入 Mermaid 图示。
+- 简单的线性说明不强行画图，不要求每个页面都使用 Mermaid。
+- Mermaid 只能辅助正文，不能替代必要的文字讲解、算法推导、正确性证明、示例或代码。
+- 图示内容必须与 raw 原文和页面正文一致，不能通过图表擅自补充未经确认的结论。
+- 使用标准 Markdown Mermaid 代码围栏，并在完成后检查代码围栏、节点语法和 Markdown 源文本是否有效。
+
 ## 正文与代码注释的分工
 
 - 正文负责完整教学：根据页面类型讲清楚原理、推导、证明、示例、边界情况、实现思路和必要的复杂度分析。
@@ -141,7 +149,6 @@ C++ 语法、函数、类、STL 等内容不属于上述算法大类，使用 la
     tags: [大类英文标签，精确英文标签]
     tags-ch: [大类中文标签，精确中文标签]
     sources: [raw/notes/源文件]
-    confidence: high | medium | low
     ---
 
 算法知识页的 tags 至少包含一个大类标签；精确标签按内容填写。
@@ -168,10 +175,9 @@ C++ 语法、函数、类、STL 等内容不属于上述算法大类，使用 la
     type: problem
     tags: [精确英文标签]
     tags-ch: [精确中文标签]
-    sources: [raw/problems/源文件或raw/notes/源文件]
+    sources: [raw/problems/源文件或knowledge/源文件]
     difficulty: S | A | B | C | D
     source_url: <题目链接>
-    confidence: high | medium | low
     ---
 
 题目页的 tags 只能使用精确标签，不用大类标签。难度由米娅先评估；精确标签无法确定时先询问教练。
@@ -227,14 +233,15 @@ C++ 语法、函数、类、STL 等内容不属于上述算法大类，使用 la
 - 题面；
 - 涉及的精确知识点；
 - S/A/B/C/D 难度及评估依据；
-- 解题思路；
-- 教练代码、作答情况和坑点；
-- 复杂度分析；
+- 一个题目页可以包含多个解法；
+- 每个解法独立设置“解题思路”“复杂度分析”“教练代码”“坑点”；
+- 不同解法之间使用同级标题区分；
+- 如果题目只有一种解法，也按照同样的解法结构编写。
 - 关联的知识页。
 
 只通过已提供的题目链接获取或补齐题面，不用网络搜索主动扩充题库。没有教练代码时标记“教练代码待补充”，不自行生成替代代码；代码有疑点时先标记并询问。
 
-题目页必须设置“解题思路”小节，按题目内容说明核心观察、算法步骤、正确性依据、边界情况和代码实现对应关系；不强制拆成固定的小标题。题目页还必须设置“复杂度分析”小节，说明时间复杂度、额外空间复杂度以及复杂度成立的原因。
+题目页每个解法必须设置“解题思路”小节，要详细一些，按题目内容说明核心观察、算法步骤、正确性依据、边界情况和代码实现对应关系；不强制拆成固定的小标题。题目页每个解法还必须设置“复杂度分析”小节，说明时间复杂度、额外空间复杂度以及复杂度成立的原因。
 
 题目代码注释遵循统一的正文与代码注释分工：使用中文，按逻辑代码块说明和关键语句适度解释，重点说明局部实现、关键决策和边界原因；不把完整推导重复写进代码，也不为显而易见的语句逐句添加注释。代码逻辑仍以教练代码为准。
 
