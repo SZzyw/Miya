@@ -178,9 +178,10 @@ C++ 语法、函数、类、STL 等内容不属于上述算法大类，使用 la
     sources: [raw/problems/源文件或knowledge/源文件]
     difficulty: S | A | B | C | D
     source_url: <题目链接>
-    ---
+    ---s
 
 题目页的 tags 只能使用精确标签，不用大类标签。难度由米娅先评估；精确标签无法确定时先询问教练。
+注意：sources: \[raw/problems/源文件或knowledge/源文件\]      ，没有  raw/notes/源文件
 
 ### tool — 工具页
 
