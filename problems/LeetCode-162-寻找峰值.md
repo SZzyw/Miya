@@ -6,7 +6,7 @@ type: problem
 tags:
   - binary-search
 tags-ch:
-  - 二分搜索
+  - 二分查找
 sources:
   - knowledge/算法讲解006【入门】二分搜索
 difficulty: D
