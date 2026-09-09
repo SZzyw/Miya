@@ -49,31 +49,31 @@ raw/notes/ 中的笔记是教练的教学素材。整理后的页面不是原文
 
 ### 算法大类
 
-| 标签                     | 中文   | 覆盖内容                                                         |
-| ---------------------- | ---- | ------------------------------------------------------------ |
-| greedy                 | 贪心   | 贪心策略、反悔贪心                                                    |
-| data-structure         | 数据结构 | 栈、队列、堆、链表、并查集、树状数组、线段树、平衡树、ST 表、莫队、二分、二分答案、分治、整体二分、CDQ 分治、排序、递归 |
-| dp                     | 动态规划 | 线性 DP、背包、区间 DP、树形 DP、状压 DP、数位 DP、记忆化搜索                       |
-| graph                  | 图论   | 最短路、最小生成树、拓扑、强连通/Tarjan、二分图、网络流、LCA、树上问题、二叉树                     |
-| number-theory          | 数论   | 素数、GCD/LCM、欧拉函数、同余、逆元、组合数学、博弈                                |
-| string                 | 字符串  | 字符串哈希、KMP、AC 自动机、Manacher、后缀数组、字典树                           |
-| computational-geometry | 计算几何 | 向量、凸包、半平面交、旋转卡壳、极角排序                                         |
-| misc                   | 其他   | 模拟、高精度、位运算                                                   |
+| 标签                     | 中文   | 覆盖内容                                                              |
+| ---------------------- | ---- | ----------------------------------------------------------------- |
+| greedy                 | 贪心   | 贪心策略、反悔贪心                                                         |
+| data-structure         | 数据结构 | 栈、队列、堆、链表、并查集、树状数组、线段树、平衡树、ST 表、莫队、二分查找、二分答案、分治、整体二分、CDQ 分治、排序、递归 |
+| dp                     | 动态规划 | 线性 DP、背包、区间 DP、树形 DP、状压 DP、数位 DP、记忆化搜索                            |
+| graph                  | 图论   | 最短路、最小生成树、拓扑、强连通/Tarjan、二分图、网络流、LCA、树上问题、二叉树                      |
+| number-theory          | 数论   | 素数、GCD/LCM、欧拉函数、同余、逆元、组合数学、博弈                                     |
+| string                 | 字符串  | 字符串哈希、KMP、AC 自动机、Manacher、后缀数组、字典树                                |
+| computational-geometry | 计算几何 | 向量、凸包、半平面交、旋转卡壳、极角排序                                              |
+| misc                   | 其他   | 模拟、高精度、位运算                                                        |
 
 C++ 语法、函数、类、STL 等内容不属于上述算法大类，使用 language/ 和 type: language 管理。
 
 ### 精确标签
 
-| 大类 | 精确标签 |
-| --- | --- |
-| greedy | greedy-strategy 贪心策略，regret-greedy 反悔贪心 |
-| data-structure | stack 栈，queue 队列，heap 堆，linked-list 链表，dsu 并查集，fenwick 树状数组，segment-tree 线段树，balanced-tree 平衡树，sparse-table ST 表，mo-algorithm 莫队，binary-search 二分搜索，binary-search-answer 二分答案，divide-and-conquer 分治，parallel-binary-search 整体二分，cdq CDQ 分治，sorting 排序，recursion 递归 |
-| dp | linear-dp 线性 DP，knapsack 背包，interval-dp 区间 DP，tree-dp 树形 DP，bitmask-dp 状压 DP，digit-dp 数位 DP，memoization 记忆化搜索 |
-| graph | shortest-path 最短路，mst 最小生成树，topological-sort 拓扑排序，tarjan 强连通/Tarjan，bipartite 二分图，network-flow 网络流，lca LCA，tree 树上问题，binary-tree 二叉树 |
-| number-theory | prime 素数，gcd-lcm GCD/LCM，euler-phi 欧拉函数，congruence 同余，inverse 逆元，combinatorics 组合数学，game-theory 博弈 |
-| string | string-hash 字符串哈希，kmp KMP，ac-automaton AC 自动机，manacher Manacher，suffix-array 后缀数组，trie 字典树 |
-| computational-geometry | vector-geo 向量，convex-hull 凸包，half-plane 半平面交，rotating-calipers 旋转卡壳，polar-sort 极角排序 |
-| misc | simulation 模拟，bigint 高精度，bitwise 位运算 |
+| 大类                     | 精确标签                                                                                                                                                                                                                                                               |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| greedy                 | greedy-strategy 贪心策略，regret-greedy 反悔贪心                                                                                                                                                                                                                            |
+| data-structure         | stack 栈，queue 队列，heap 堆，linked-list 链表，dsu 并查集，fenwick 树状数组，segment-tree 线段树，balanced-tree 平衡树，sparse-table ST 表，mo-algorithm 莫队，binary-search 二分查找，binary-search-answer 二分答案，divide-and-conquer 分治，parallel-binary-search 整体二分，cdq CDQ 分治，sorting 排序，recursion 递归 |
+| dp                     | linear-dp 线性 DP，knapsack 背包，interval-dp 区间 DP，tree-dp 树形 DP，bitmask-dp 状压 DP，digit-dp 数位 DP，memoization 记忆化搜索                                                                                                                                                      |
+| graph                  | shortest-path 最短路，mst 最小生成树，topological-sort 拓扑排序，tarjan 强连通/Tarjan，bipartite 二分图，network-flow 网络流，lca LCA，tree 树上问题，binary-tree 二叉树                                                                                                                               |
+| number-theory          | prime 素数，gcd-lcm GCD/LCM，euler-phi 欧拉函数，congruence 同余，inverse 逆元，combinatorics 组合数学，game-theory 博弈                                                                                                                                                                 |
+| string                 | string-hash 字符串哈希，kmp KMP，ac-automaton AC 自动机，manacher Manacher，suffix-array 后缀数组，trie 字典树                                                                                                                                                                         |
+| computational-geometry | vector-geo 向量，convex-hull 凸包，half-plane 半平面交，rotating-calipers 旋转卡壳，polar-sort 极角排序                                                                                                                                                                                |
+| misc                   | simulation 模拟，bigint 高精度，bitwise 位运算                                                                                                                                                                                                                               |
 
 标签处理规则：
 
@@ -111,7 +111,7 @@ C++ 语法、函数、类、STL 等内容不属于上述算法大类，使用 la
 - 从 raw 整理出的知识页和语言页，文件名与 raw 原文件名完全一致。
 - 页面文件名不使用空格。
 - 题目页文件名使用“平台-题号-题名”，例如 LeetCode-162-寻找峰值.md、洛谷-P4779-单源最短路.md。
-- 使用 Obsidian 双链语法 `[[页面名]]` 做页面互链，例如 `[[二分搜索]]`。
+- 使用 Obsidian 双链语法 `[[页面名]]` 做页面互链，例如 `[[二分查找]]`。
 - 每个页面必须在 index.md 的对应栏目登记。
 - 每次修改 wiki 页面时更新 frontmatter 中的 updated 日期。
 - 每次 wiki 内容操作追加到 log.md，记录日期、对象和动作。
