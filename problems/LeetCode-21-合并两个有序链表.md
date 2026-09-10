@@ -1,11 +1,11 @@
 ---
 title: LeetCode 21：合并两个有序链表
 created: 2026-09-01
-updated: 2026-09-01
+updated: 2026-09-10
 type: problem
 tags: [linked-list]
 tags-ch: [链表]
-sources: [raw/notes/算法讲解009【入门】单双链表.md]
+sources: [knowledge/算法讲解009【入门】单双链表]
 difficulty: D
 source_url: https://leetcode.cn/problems/merge-two-sorted-lists/
 ---
@@ -87,4 +87,4 @@ public:
 
 [[算法讲解009【入门】单双链表]]
 
-^[raw/notes/算法讲解009【入门】单双链表.md]
+^[knowledge/算法讲解009【入门】单双链表.md]

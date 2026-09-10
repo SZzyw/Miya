@@ -1,14 +1,14 @@
 ---
 title: 洛谷 P1827【USACO3.4】美国血统 American Heritage
 created: 2026-09-02
-updated: 2026-09-02
+updated: 2026-09-10
 type: problem
 tags:
   - binary-tree
 tags-ch:
   - 二叉树
 sources:
-  - knowledge/算法讲解017【入门】二叉树及其三种序的递归实现.md
+  - knowledge/算法讲解017【入门】二叉树及其三种序的递归实现
 difficulty: D
 source_url: https://www.luogu.com.cn/problem/P1827
 ---
@@ -128,4 +128,4 @@ int main() {
 
 [[算法讲解017【入门】二叉树及其三种序的递归实现]]
 
-^[raw/notes/算法讲解017【入门】二叉树及其三种序的递归实现.md]
+^[knowledge/算法讲解017【入门】二叉树及其三种序的递归实现.md]

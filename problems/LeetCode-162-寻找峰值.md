@@ -1,7 +1,7 @@
 ---
 title: LeetCode 162：寻找峰值
 created: 2026-08-22
-updated: 2026-08-24
+updated: 2026-09-10
 type: problem
 tags:
   - binary-search
@@ -157,4 +157,4 @@ public:
 - 返回的是任意一个峰值，不需要寻找下标最小的峰值。
 
 
-^[raw/notes/算法讲解006【入门】二分搜索.md]
+^[knowledge/算法讲解006【入门】二分搜索.md]

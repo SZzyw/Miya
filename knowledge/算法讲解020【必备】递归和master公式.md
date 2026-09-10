@@ -1,7 +1,7 @@
 ---
 title: 递归和 Master 公式
 created: 2026-09-01
-updated: 2026-09-01
+updated: 2026-09-10
 type: knowledge
 tags:
   - data-structure
@@ -10,7 +10,7 @@ tags-ch:
   - 数据结构
   - 递归
 sources:
-  - raw/notes/算法讲解020【必备】递归和master公式.md
+  - raw/notes/算法讲解020【必备】递归和master公式
 ---
 
 # 递归和 Master 公式

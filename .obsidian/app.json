@@ -6,5 +6,6 @@
   "spellcheck": false,
   "autoPairBrackets": false,
   "autoPairMarkdown": false,
-  "smartIndentList": false
+  "smartIndentList": false,
+  "alwaysUpdateLinks": true
 }

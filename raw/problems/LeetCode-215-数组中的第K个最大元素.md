@@ -25,8 +25,8 @@ public:
 
     int findKthLargest(vector<int> &nums, int k) {
         int l = 0, r = nums.size() - 1;
+		srand(time(0));
         while (1) {
-            srand(time(0));
             int x = nums[rand() % (r - l + 1) + l];
             array<int, 2> mid = partition(nums, l, r, x);
             if (k <= r - mid[1])
