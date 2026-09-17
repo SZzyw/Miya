@@ -28,21 +28,30 @@ c: 4 1 3 2
 #include <bits/stdc++.h>
 using namespace std;
 struct DSU {
-    vector<int> father;
+    vector<int> father,mmax;
     DSU(int n) {
         father.assign(n, 0);
+        mmax.assign(n, 0);
         for (int i=0;i<n;i++)
             father[i] = i;
     }
     int find(int x) {
-        if (father[x] != x)
-            father[x]=find(father[x]);
-        return father[x];
+        int root=x;
+        while (father[root]!=root)
+            root=father[root];
+        while (father[x]!=x) {
+            int nxt=father[x];
+            father[x]=root;
+            x=nxt;
+        }
+        return root;
     }
     void unite(int x, int y) {
         int fx=find(x), fy=find(y);
-        if (fx!=fy)
+        if (fx!=fy) {
             father[fx]=fy;
+            mmax[fy]=max(mmax[fy],mmax[fx]);
+        }
     }
 };
 struct Discrete {
@@ -90,15 +99,16 @@ void solve() {
         c[i]=cc.find(c[i]);
 
     DSU dsu(n);
+    dsu.mmax=b;
 
-    for (int i=0;i<dsu.father.size();i++) {
+    for (int i=0;i<bb.arr.size();i++) {
         int x=mp[i];
         if (x!=dsu.find(x))
             continue;
         int y=x+1;
         while (y<n) {
             y=dsu.find(y);
-            if (b[y]<i)
+            if (dsu.mmax[y]<i)
                 break;
             dsu.unite(x,y);
             y++;
